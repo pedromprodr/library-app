@@ -20,19 +20,26 @@ function createBookElement(book) {
     const bookName = document.createElement('h2');
     bookName.className = "bookName";
     const bookAuthor = document.createElement('h3');
-    bookName.className = "bookAuthor";
+    bookAuthor.className = "bookAuthor";
     const pages = document.createElement('h4');
     pages.className = "pages";
     const read = document.createElement('input')
     read.type = "checkbox";
     read.className = "toggle";
-    const img = document.createElement('img')
-    img.src = "/"
+    const readText =document.createElement('h4');
+    readText.className = "readText";
+    readText.textContent = "Finished!"
+  
+    
 
     bookContainer.appendChild(bookAuthor);
     bookContainer.appendChild(bookName);
     bookContainer.appendChild(pages);
     bookContainer.appendChild(read);
+    if(book.read){
+        bookContainer.appendChild(readText);
+    }
+    
     
 
     bookName.textContent = book.title;
@@ -44,8 +51,10 @@ function createBookElement(book) {
         if(read.checked){
             console.log('checked');
             book.read = true;
+            bookContainer.appendChild(readText);
         }else{
             book.read = false;
+            bookContainer.removeChild(readText);
         }
     })
 

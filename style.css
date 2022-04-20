@@ -10,13 +10,16 @@ body{
     justify-content: center;
     align-items: center;
     height: 90px;
-    background-color: #874356;
+    background-color: #C65D7B;
+    box-shadow: #874356 4px 4px 0 0;
 }
 
 .headerTitle{
     color: #EDE6DB;
     font-weight: 700;
     font-size: 30px;
+
+    filter: drop-shadow(4px 4px 0px #874356);
 }
 .container{
     display: flex;
@@ -64,11 +67,12 @@ input[type=checkbox]:focus {
 .toggle {
   height: 32px;
   width: 52px;
+  grid-column: 3/4;
+  justify-self: end;
   border-radius: 16px;
   display: inline-block;
   position: relative;
   margin: 0;
-  margin-top: 20px;
   border: 2px solid #474755;
   background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
   transition: all 0.2s ease;
@@ -81,27 +85,59 @@ input[type=checkbox]:focus {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: white;
+  background: #F6E7D8;
   box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
   transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
 }
 .toggle:checked {
-  border-color: #F6E7D8;
-background: #F68989;
+  border-color: #5e2e3b;
+  background: #F68989;
 }
 .toggle:checked:after {
   transform: translatex(20px);
-}
-
-.bookName{
-    color: #EDE6DB;
 }
 .bookContainer{
     margin: 10px;
     border-radius: 20px;
     padding: 30px;
     background-color: #C65D7B;
-    height: 200px;
-    width: 800px;
+    height: auto;
+    width: 40%;
+    display:grid;
+    grid-template-columns: 4fr 1fr 2fr;
+    grid-template-rows: auto;
     box-shadow: #874356 8px 10px 0 0;    
+}
+.pages{
+  padding-top: 20px;
+  grid-column: 1/2;
+  grid-row: 4/5;
+  align-self: end;
+}
+.bookAuthor{
+  font-size: 14px;
+  font-weight: 500;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  align-self: end;
+}
+.bookName{
+  font-size: 18px;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.bookAuthor,
+.bookName{
+  color: #EDE6DB;
+}
+.readText{
+  font-size: 12px;
+  grid-row: 4/5;
+  grid-column: 3/4;
+  align-self:end ;
+  justify-self: end;
+  color: #EDE6DB;
+}
+.pages{
+  color: #5e2e3b;
 }
