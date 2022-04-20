@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #F6E7D8;
+    font-family: 'Montserrat', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    background-color: #874356;
+}
+
+.headerTitle{
+    color: #EDE6DB;
+    font-weight: 700;
+    font-size: 30px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#add{
+    display: inline-block;  
+    line-height: 50px;  
+    border: 2px solid #874356;
+    box-shadow: #874356 4px 4px 0 0;
+    color: #F6E7D8;
+    text-align: center;
+    touch-action: manipulation;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+    margin:20px;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: #C65D7B;
+}
+#add:hover {
+  background-color: #F6E7D8;
+  color: #874356;
+}
+#add:active {
+  box-shadow: #874356 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+input[type=checkbox]:focus {
+  outline: 0;
+}
+
+.toggle {
+  height: 32px;
+  width: 52px;
+  border-radius: 16px;
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  margin-top: 20px;
+  border: 2px solid #474755;
+  background: linear-gradient(180deg, #2D2F39 0%, #1F2027 100%);
+  transition: all 0.2s ease;
+}
+.toggle:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 2px rgba(44, 44, 44, 0.2);
+  transition: all 0.2s cubic-bezier(0.5, 0.1, 0.75, 1.35);
+}
+.toggle:checked {
+  border-color: #F6E7D8;
+background: #F68989;
+}
+.toggle:checked:after {
+  transform: translatex(20px);
+}
+
+.bookName{
+    color: #EDE6DB;
+}
+.bookContainer{
+    margin: 10px;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: #C65D7B;
+    height: 200px;
+    width: 800px;
+    box-shadow: #874356 8px 10px 0 0;    
+}
