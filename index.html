@@ -14,14 +14,37 @@
     <script src="script.js" defer></script>
     <title>Library</title>
 </head>
-
+    
 <body>
     <div class="header">
         <h2 class="headerTitle">My Library</h2>
+        <h4>a project by pedromprod</h4>
     </div>
     <div class="container">
         <button id="add">+ Add a new book</button>
     </div>
+    <div class="formPopup" method='post' id="popupForm">
+        <form id="bookForm" class="formContainer">
+          <label for="book-title">
+            <strong>Book Title</strong>
+          </label>
+          <input class="form-input" type="text" id="book-title" placeholder="The title of the book" name="book-title" required>
+          <label for="book-author">
+            <strong>Author's Name</strong>
+          </label>
+          <input class="form-input" type="text" id="book-author" placeholder="The author of the book" name="book-author" required>
+          <label for="book-pages">
+            <strong>Number of pages</strong>
+          </label>
+          <input class="form-input" type="number" id="book-pages" placeholder="The total pages" name="book-pages" required>
+          <label for="read">
+            <strong>Have you read the book?</strong>
+          </label>
+          <input class="form-input toggle" type="checkbox" id="read" name="read">
+          <button type="submit" class="btn" onclick="submitForm()">Submit</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
 </body>
 
 </html>
